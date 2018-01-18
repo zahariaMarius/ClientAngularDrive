@@ -31,8 +31,7 @@ export class HeroService {
     return this.http.get('http://localhost:3000', { responseType: 'text' })
     .pipe(
       tap(data => {
-        //console.log(data);
-        //console.log(this.sanitizer.bypassSecurityTrustHtml(data));
+        console.log(data);
       }),
         catchError(this.handleError('getIndexPage', ''))
     );

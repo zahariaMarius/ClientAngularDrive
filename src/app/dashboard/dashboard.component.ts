@@ -50,7 +50,6 @@ export class DashboardComponent implements OnInit {
   getIndexPageFromService(): void {
     this.heroService.getIndexPage().subscribe(
       data => {
-        //console.log(data);
         this.myTemplate = this.sanitizer.bypassSecurityTrustHtml(data.toString());
       }
     );
